@@ -10,9 +10,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.yoshi.core.Constants
-import com.yoshi.core.UserRepository
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

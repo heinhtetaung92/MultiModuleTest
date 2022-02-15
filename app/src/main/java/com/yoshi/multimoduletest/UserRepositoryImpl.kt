@@ -1,11 +1,12 @@
 package com.yoshi.multimoduletest
 
-import com.yoshi.core.UserRepository
-import dagger.hilt.android.scopes.ActivityScoped
+import com.yoshi.core.repository.UserRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 
-class UserRepositoryImpl: UserRepository {
+@Singleton
+class UserRepositoryImpl
+    @Inject constructor(): UserRepository {
     private var name: String? = null
     private var phone: String? = null
 

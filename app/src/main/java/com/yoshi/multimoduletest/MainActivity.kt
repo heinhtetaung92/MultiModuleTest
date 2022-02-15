@@ -2,11 +2,7 @@ package com.yoshi.multimoduletest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.yoshi.core.UserRepository
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 

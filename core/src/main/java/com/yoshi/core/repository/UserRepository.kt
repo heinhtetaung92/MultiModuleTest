@@ -1,4 +1,4 @@
-package com.yoshi.core
+package com.yoshi.core.repository
 
 interface UserRepository {
 

@@ -5,6 +5,7 @@ import com.yoshi.core.SampleProvider
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -14,6 +15,7 @@ class CoreModule {
 
     @Singleton
     @Provides
-    fun provideSampleProvider(context: Context): SampleProvider = SampleProvider(context = context)
+    fun provideSampleProvider(@ApplicationContext context: Context): SampleProvider =
+        SampleProvider(context)
 
 }

@@ -2,34 +2,32 @@ package com.yoshi.rewards
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import com.yoshi.core.SampleProvider
-import com.yoshi.core.di.CoreDependencies
-import com.yoshi.rewards.di.DaggerRewardsComponent
-import dagger.hilt.android.EntryPointAccessors
+import com.yoshi.core.repository.UserRepository
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 
+@AndroidEntryPoint
 class RewardsActivity : AppCompatActivity() {
+
+    private val viewModel: SampleViewModel by viewModels()
 
     @Inject
     lateinit var toastProvider: SampleProvider
+
+    @Inject
+    lateinit var repo: UserRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rewards)
 
-//        Log.i("RewardsActivity", repository.getUserName())
-        initDependencies()
-        toastProvider.showToast("Hey, greeting from Provider")
+//        viewModel.showToast(this)
+        toastProvider.showToast(repo.getUserName())
 
 
-    }
-
-    private fun initDependencies() {
-        DaggerRewardsComponent.factory()
-            .coreDependency(
-                EntryPointAccessors.fromApplication(application, CoreDependencies::class.java)
-            ).inject(this)
     }
 
 }

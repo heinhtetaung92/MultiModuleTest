@@ -35,10 +35,10 @@ android {
 
 dependencies {
 
+    implementation project(":core")
     implementation project(":list")
     implementation project(":favourite")
     implementation project(":settings")
-    implementation project(":core")
     implementation project(":rewards")
 
     implementation 'androidx.core:core-ktx:1.3.2'
