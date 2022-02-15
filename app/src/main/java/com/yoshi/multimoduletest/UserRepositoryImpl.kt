@@ -5,7 +5,6 @@ import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@ActivityScoped
 class UserRepositoryImpl: UserRepository {
     private var name: String? = null
     private var phone: String? = null
