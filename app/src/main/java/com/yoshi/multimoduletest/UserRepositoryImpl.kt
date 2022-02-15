@@ -1,6 +1,7 @@
 package com.yoshi.multimoduletest
 
 import com.yoshi.core.repository.UserRepository
+import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
 import javax.inject.Singleton
 

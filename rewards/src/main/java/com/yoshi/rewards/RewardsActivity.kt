@@ -12,21 +12,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class RewardsActivity : AppCompatActivity() {
 
-    private val viewModel: SampleViewModel by viewModels()
-
-    @Inject
-    lateinit var toastProvider: SampleProvider
-
-    @Inject
-    lateinit var repo: UserRepository
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rewards)
-
-//        viewModel.showToast(this)
-        toastProvider.showToast(repo.getUserName())
-
 
     }
 

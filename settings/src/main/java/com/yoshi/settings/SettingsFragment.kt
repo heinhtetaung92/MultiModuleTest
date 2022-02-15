@@ -10,6 +10,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.yoshi.core.Constants
+import com.yoshi.core.SampleProvider
+import com.yoshi.core.repository.UserRepository
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,6 +31,7 @@ class SettingsFragment : Fragment() {
     private var param2: String? = null
 
     var count = 1
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +56,6 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.i("SettingsFragment", "onViewCreated")
-
 
         val tvLabel = view.findViewById<TextView>(R.id.tv_label)
         tvLabel.setOnClickListener {
